@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import BackgroundCircle from './BackgroundCircle'
 import { dummyShowsData } from '../assets/assets'
 import MovieCard from './MovieCard'
+import TrailerSection from './TrailerSection'
 
 const FeaturedSection = () => {
 
@@ -36,6 +37,8 @@ const FeaturedSection = () => {
           Show More
         </button>
       </div>
+
+      
 
     </div>
   )
