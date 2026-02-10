@@ -13,7 +13,8 @@
 *{
 
  font-family: "Outfit", sans-serif;
-  
+ scrollbar-width: thin;
+  scrollbar-color: #FF5C00 transparent;
 
 }
 

@@ -12,6 +12,8 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/movies' element={<Movies/>}/>
+      <Route path='/movies/:id'/>
+      
       <Route path='/*' element={<><h1>404 Go back page unavailable</h1></>}/>
     </Routes>
     </>
