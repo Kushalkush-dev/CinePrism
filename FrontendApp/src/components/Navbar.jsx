@@ -53,7 +53,7 @@ const Navbar = () => {
         <XIcon onClick={()=>setisnavopen(false)} className='md:hidden absolute top-6 right-6 w-6 h-6 cursor-pointer' />
         {navLinks.map((link,idx) => (
 
-          <Link key={idx} to={link.Path}>{link.Title}</Link>
+          <Link onClick={()=>setisnavopen(false)} key={idx} to={link.Path}>{link.Title}</Link>
 
         ))}
 
