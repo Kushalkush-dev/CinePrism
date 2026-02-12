@@ -22,3 +22,7 @@ body{
   background-color: #09090B;
   color: white;
 };
+
+.no-scroll-bar {
+  scrollbar-width:thin;
+}

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Movies from './pages/Movies'
 import Favorites from './pages/Favorites'
+import MoviePage from './pages/MoviePage'
 
 
 const App = () => {
@@ -16,9 +17,9 @@ const App = () => {
         <Route path='/movies' element={<Movies />} />
         <Route path='/favorites' element={<Favorites />} />
 
-        <Route path='/movies/:id' />
+        <Route path='/movie/:id' element={<MoviePage/>} />
 
-        <Route path='/*' element={<><h1>404 Go back page unavailable</h1></>} />
+        <Route path='*' element={<><h1>404 Go back page unavailable</h1></>} />
       </Routes>
 
       <Footer />

@@ -24,7 +24,7 @@ const MovieCard = ({ movie }) => {
 
       <div className='flex items-center justify-between mt-3 pb-3'>
 
-        <button onClick={()=>navigate(`/movies/${movie.id}`) } className='px-4 py-2 text-xs bg-primary hover:bg-primary-dull
+        <button onClick={()=>navigate(`/movie/${movie.id}`) } className='px-4 py-2 text-xs bg-primary hover:bg-primary-dull
                             transition rounded-full font-medium cursor-pointer' >Buy Tickets</button>
 
 
