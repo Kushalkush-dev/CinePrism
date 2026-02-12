@@ -45,7 +45,12 @@ const MoviePage = () => {
         <img src={show.movie.poster_path} alt="movie poster" className='max-md:mx-auto rounded-xl h-104 max-w-70 object-cover' />
 
         <div className=' relative flex flex-col gap-3'>
-          <BackgroundCircle />
+          <BackgroundCircle top='-100px' left='-100px' />
+          <BackgroundCircle top='-100px' left='-100px' />
+          <BackgroundCircle top='250px' left='-400px' />
+          <BackgroundCircle top='250px' left='-400px' />
+
+
           <p className='text-primary'>ENGLISH</p>
           <h1 className='text-4xI font-semibold max-w-96 text-balance'>{show.movie.title}</h1>
           <div className='flex items-center gap-2 text-gray-300'>
@@ -57,7 +62,7 @@ const MoviePage = () => {
 
           <p className='text-gray-400 mt-2 text-sm leading-tight max-w-xl ' >{show.movie.overview}</p>
 
-          <p className=''>
+          <p className='text-gray-100 mt-2 text-sm leading-tight max-w-xl '>
             {timeFormat(show.movie.runtime)} • {show.movie.genres.map((genre) => genre.name).join(", ")} • {show.movie.release_date.split("-")[0]}
           </p>
 
@@ -70,7 +75,7 @@ const MoviePage = () => {
             </button>
 
 
-            <a href="" className='px-10 py-3 text-sm bg-primary hover:bg-primary-dull transition rounded-md font-medium cursor-pointer active:scale-95' >Buy Tickets</a>
+            <a href="#dateSelect" className='px-10 py-3 text-sm bg-primary hover:bg-primary-dull transition rounded-md font-medium cursor-pointer active:scale-95' >Buy Tickets</a>
 
 
             <button className='bg-gray-700 p-2.5 rounded-full transition cursor-pointer active:scale-95'>
@@ -82,19 +87,19 @@ const MoviePage = () => {
       </div>
 
 
-       <p className='text-lg font-medium mt-20' >Your Favorite Cast</p>
-        <div className='overflow-x-auto no-scroll-bar mt-8 pb-4'>
-          <div className='flex items-center gap-4 w-max px-4'>
+      <p className='text-lg font-medium mt-20' >Your Favorite Cast</p>
+      <div className='overflow-x-auto no-scroll-bar mt-8 pb-4'>
+        <div className='flex items-center gap-4 w-max px-4'>
 
-            {show.movie.casts.slice(0, 11).map((cast,idx) => (
-              <div key={idx} className='flex flex-col items-center gap-4 w-max px-4'>
-                <img src={cast.profile_path} alt="castProfile" className='h-20 md:h-20 aspect-square object-cover rounded-full' />
-                <p className='font-medium text-sm'>{cast.name}</p>
-              </div>
-            ))}
+          {show.movie.casts.slice(0, 11).map((cast, idx) => (
+            <div key={idx} className='flex flex-col items-center gap-4 w-max px-4'>
+              <img src={cast.profile_path} alt="castProfile" className='h-20 md:h-20 aspect-square object-cover rounded-full' />
+              <p className='font-medium text-sm'>{cast.name}</p>
+            </div>
+          ))}
 
-          </div>
         </div>
+      </div>
 
 
 
